@@ -1,12 +1,7 @@
-"use client";
-
 import React from "react";
 import PromptBuilder from "../components/PromptBuilder";
-import HelpDialog from "../components/HelpDialog";
-import { Code, Github } from "lucide-react";
-import FourSection from "@/components/home/FourSection";
-import Footer from "@/components/layout/Footer";
 import Layout from "@/components/layout/Layout";
+import HowToUseSection from "@/components/home/HowToUseSection";
 
 export default function HomePage() {
   return (
@@ -28,7 +23,7 @@ export default function HomePage() {
           {/* Prompt Builder Component */}
           <PromptBuilder />
 
-          <FourSection />
+          <HowToUseSection />
         </div>
       </div>
     </Layout>
