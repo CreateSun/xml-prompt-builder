@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Professional XML Prompt Editor",
   description:
-    "Professional XML prompt editor, help you to build xml-like prompt for AI Agents",
+    "Professional XML prompt editor, help you to build xml-like prompt for AI Agents. Perfect for prompt engineers and AI enthusiasts.",
   icons: {
     icon: "/favicon.ico",
   },
@@ -20,11 +20,7 @@ export const metadata: Metadata = {
     "xml prompt editor",
     "xml prompt builder",
     "xml prompt generator",
-    "xml prompt tool",
-    "xml prompt editor",
-    "xml prompt builder",
-    "xml prompt generator",
-    "xml prompt tool",
+    "xml prompt editor"
   ],
   openGraph: {
     title: "Professional XML Prompt Editor",
