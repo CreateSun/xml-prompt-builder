@@ -1,11 +1,19 @@
+"use client";
 
-"use client"
-
-import React from 'react';
-import { XMLElement } from './PromptBuilder';
-import { Button } from '@/components/ui/button';
-import { ChevronDown, ChevronRight, Plus, Trash, ArrowUp, ArrowDown, Eye, EyeOff } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import React from "react";
+import { XMLElement } from "./PromptBuilder";
+import { Button } from "@/components/ui/button";
+import {
+  ChevronDown,
+  ChevronRight,
+  Plus,
+  Trash,
+  ArrowUp,
+  ArrowDown,
+  Eye,
+  EyeOff,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface ElementTreeProps {
   elements: XMLElement[];
@@ -33,13 +41,20 @@ const ElementTree: React.FC<ElementTreeProps> = ({
   depth = 0,
 }) => {
   return (
-    <div className={cn("space-y-2", depth > 0 && "ml-6 pl-2 border-l-2 border-black dark:border-gray-700")}>
+    <div
+      className={cn(
+        "space-y-2",
+        depth > 0 && "ml-6 pl-2 border-l-2 border-black dark:border-gray-700"
+      )}
+    >
       {elements.map((element, index) => (
         <div key={element.id} className="space-y-2">
-          <div 
+          <div
             className={cn(
               "flex items-center gap-2 p-2 rounded cursor-pointer group",
-                              selectedElementId === element.id ? "bg-primary/50" : "hover:bg-gray-100 dark:hover:bg-gray-800"
+              selectedElementId === element.id
+                ? "bg-primary/15 bg-opacity-50"
+                : "hover:bg-gray-100 dark:hover:bg-gray-800"
             )}
           >
             {element.children.length > 0 && (
@@ -56,22 +71,26 @@ const ElementTree: React.FC<ElementTreeProps> = ({
                 )}
               </Button>
             )}
-            
-            <div 
+
+            <div
               className="flex-1 flex items-center gap-1 font-bold"
               onClick={() => onElementSelect(element)}
             >
-              <span className="text-gray-600 dark:text-gray-400 font-black">&lt;</span>
+              <span className="text-gray-600 dark:text-gray-400 font-black">
+                &lt;
+              </span>
               <span className="font-mono">{element.tagName}</span>
-              <span className="text-gray-600 dark:text-gray-400 font-black">&gt;</span>
-              
+              <span className="text-gray-600 dark:text-gray-400 font-black">
+                &gt;
+              </span>
+
               {element.content && (
                 <span className="text-xs text-gray-500 truncate max-w-[150px] font-normal">
                   {element.content}
                 </span>
               )}
             </div>
-            
+
             <div className="opacity-0 group-hover:opacity-100 flex items-center gap-1">
               <Button
                 variant="ghost"
@@ -82,7 +101,11 @@ const ElementTree: React.FC<ElementTreeProps> = ({
                   onToggleVisibility(element.id);
                 }}
               >
-                {element.isVisible ? <Eye className="h-4 w-4 stroke-[3]" /> : <EyeOff className="h-4 w-4 stroke-[3]" />}
+                {element.isVisible ? (
+                  <Eye className="h-4 w-4 stroke-[3]" />
+                ) : (
+                  <EyeOff className="h-4 w-4 stroke-[3]" />
+                )}
               </Button>
 
               <Button
@@ -96,7 +119,7 @@ const ElementTree: React.FC<ElementTreeProps> = ({
               >
                 <ArrowUp className="h-4 w-4 stroke-[3]" />
               </Button>
-              
+
               <Button
                 variant="ghost"
                 size="icon"
@@ -108,7 +131,7 @@ const ElementTree: React.FC<ElementTreeProps> = ({
               >
                 <ArrowDown className="h-4 w-4 stroke-[3]" />
               </Button>
-              
+
               <Button
                 variant="ghost"
                 size="icon"
@@ -120,11 +143,11 @@ const ElementTree: React.FC<ElementTreeProps> = ({
               >
                 <Plus className="h-4 w-4 stroke-[3]" />
               </Button>
-              
+
               <Button
                 variant="ghost"
                 size="icon"
-                className="h-6 w-6 bg-destructive hover:bg-destructive/90 text-white"
+                className="h-6 w-6 bg-destructive bg-red-400 hover:bg-destructive/90 text-white"
                 onClick={(e) => {
                   e.stopPropagation();
                   onDelete(element.id);
@@ -134,7 +157,7 @@ const ElementTree: React.FC<ElementTreeProps> = ({
               </Button>
             </div>
           </div>
-          
+
           {element.children.length > 0 && !element.collapsed && (
             <ElementTree
               elements={element.children}

@@ -611,7 +611,7 @@ const PromptBuilder: React.FC = () => {
 
         <div
           className={cn(
-            "border-1 border-black dark:border-gray-100 p-4 bg-white dark:bg-gray-800 rounded-none h-[45vh]",
+            "border-1 border-black dark:border-gray-100 p-4 bg-white dark:bg-gray-800 rounded-none h-[45vh] overflow-y-auto",
             !selectedElement && "flex items-center justify-center"
           )}
         >

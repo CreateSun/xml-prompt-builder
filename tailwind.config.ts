@@ -25,8 +25,8 @@ export default {
 				background: 'var(--background)',
 				foreground: 'var(--foreground)',
 				primary: {
-					DEFAULT: 'var(--primary)',
-					foreground: 'var(--primary-foreground)'
+					DEFAULT: '#007acc',
+					foreground: '#007acc'
 				},
 				secondary: {
 					DEFAULT: 'var(--secondary)',
@@ -37,8 +37,8 @@ export default {
 					foreground: 'var(--destructive-foreground)'
 				},
 				muted: {
-					DEFAULT: 'var(--muted)',
-					foreground: 'var(--muted-foreground)'
+					DEFAULT: '#9ca3af',
+					foreground: '#9ca3af'
 				},
 				accent: {
 					DEFAULT: 'var(--accent)',

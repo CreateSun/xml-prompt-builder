@@ -1,11 +1,10 @@
+"use client";
 
-"use client"
-
-import React, { useState, useEffect } from 'react';
-import { XMLElement } from './PromptBuilder';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
+import React, { useState, useEffect } from "react";
+import { XMLElement } from "./PromptBuilder";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 interface ElementEditorProps {
   element: XMLElement;
@@ -22,11 +21,11 @@ const ElementEditor: React.FC<ElementEditorProps> = ({ element, onUpdate }) => {
   }, [element.id, element.tagName, element.content]);
 
   const handleTagNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newTagName = e.target.value.replace(/\s+/g, '-').toLowerCase();
+    const newTagName = e.target.value.replace(/\s+/g, "-").toLowerCase();
     setTagName(newTagName);
     onUpdate({
       ...element,
-      tagName: newTagName
+      tagName: newTagName,
     });
   };
 
@@ -34,31 +33,35 @@ const ElementEditor: React.FC<ElementEditorProps> = ({ element, onUpdate }) => {
     setContent(e.target.value);
     onUpdate({
       ...element,
-      content: e.target.value
+      content: e.target.value,
     });
   };
 
   return (
     <div className="space-y-4 font-mono">
       <div>
-        <Label htmlFor="tagName" className="font-black text-white dark:text-white">Tag Name</Label>
+        <Label htmlFor="tagName" className="font-black">
+          Tag Name
+        </Label>
         <Input
           id="tagName"
           value={tagName}
           onChange={handleTagNameChange}
           placeholder="Enter tag name"
-                        className="mt-1 border-1 border-black dark:border-gray-400 rounded-none focus:ring-primary focus:border-primary font-mono"
+          className="mt-1 border-1 border-black dark:border-gray-400 bg-input rounded-none focus:ring-primary focus:border-primary font-mono"
         />
       </div>
-      
+
       <div>
-        <Label htmlFor="content" className="font-black text-white dark:text-white">Content</Label>
+        <Label htmlFor="content" className="font-black">
+          Content
+        </Label>
         <Textarea
           id="content"
           value={content}
           onChange={handleContentChange}
           placeholder="Enter content (optional)"
-                        className="mt-1 min-h-[100px] border-1 border-black dark:border-gray-400 rounded-none focus:ring-primary focus:border-primary font-mono"
+          className="mt-1 min-h-[100px] border-1 border-black dark:border-gray-400 bg-input rounded-none focus:ring-primary focus:border-primary font-mono"
         />
       </div>
     </div>
