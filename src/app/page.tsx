@@ -1,12 +1,13 @@
+'use client';
 
 import React from 'react';
 import PromptBuilder from '../components/PromptBuilder';
 import HelpDialog from '../components/HelpDialog';
 import { Code, Github, PlusCircle, Sparkles, ClipboardPaste } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+// import { Button } from '';
 import { useIsMobile } from '@/hooks/use-mobile';
 
-const Index = () => {
+export default function HomePage() {
   const isMobile = useIsMobile();
   
   return (
@@ -98,6 +99,5 @@ const Index = () => {
       </footer>
     </div>
   );
-};
+}
 
-export default Index;

@@ -1,94 +1,94 @@
 
 # XML Prompt Builder
 
-<div align="center">
+A modern web application built with **Next.js 14** that helps you create structured XML prompts for AI systems without the hassle of manual formatting. Perfect for prompt engineers and AI enthusiasts.
 
-[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/lolrazh/xml-prompt-builder)
-![License](https://img.shields.io/github/license/lolrazh/xml-prompt-builder)
+## 🚀 Features
 
-</div>
+- **Visual XML Builder**: Create XML tags and nest them to create complex hierarchies easily
+- **Automatic Formatting**: Let the tool handle indentation, nesting, and proper XML formatting
+- **Import Existing XML**: Paste an existing XML prompt and edit it visually in seconds
+- **Drag & Drop Interface**: Intuitive drag-and-drop interface for reordering elements
+- **Real-time Preview**: See your XML structure as you build it
+- **Token Counting**: Estimate token usage for your prompts
+- **Responsive Design**: Works perfectly on desktop and mobile devices
 
-<div align="center">
-  <img src="public/page.png" alt="XML Prompt Builder Logo" width="1000"/>
-</div>
+## 🛠️ Tech Stack
 
-## 🚀 Overview
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Radix UI
+- **State Management**: React Hooks
+- **Drag & Drop**: @dnd-kit
+- **Icons**: Lucide React
 
-XML Prompt Builder is a visual tool for creating structured XML prompts for AI systems. This project helps prompt engineers and AI enthusiasts to create, edit, and format complex XML structures without dealing with manual syntax and formatting issues.
+## 📦 Installation
 
-## ✨ Features
-
-- **Visual XML Building**: Create structured XML elements through an intuitive interface
-- **Nested Structures**: Easily create parent-child relationships with proper nesting
-- **Real-time Preview**: See your XML structure update in real-time as you build
-- **Drag & Drop Reordering**: Rearrange elements with simple up/down controls
-- **Collapsible Elements**: Toggle visibility of complex nested structures
-- **Copy to Clipboard**: Export your finished XML with one click
-
-## 🛠️ How to Use
-
-### Getting Started
-1. Click "Add Element" to create a new XML tag
-2. Select any element to edit its name and content
-3. Add child elements to create nested structures
-
-### Managing Elements
-- Toggle elements to collapse/expand them
-- Use the up/down arrows to rearrange elements
-- Child elements will stay within their parent when rearranged
-
-### Preview & Export
-- Preview your XML on the right panel
-- Copy the final XML with the copy button when you're done
-
-## 🔧 Technical Implementation
-
-XML Prompt Builder is built using:
-
-- React + TypeScript for a robust component architecture
-- Vite for lightning-fast development experience
-- Tailwind CSS for responsive and customizable styling
-- shadcn/ui for beautiful UI components
-- Lucide React for crisp, scalable icons
-
-## 🏁 Running Locally
-
-```sh
-# Clone the repository
+1. Clone the repository:
+```bash
 git clone https://github.com/lolrazh/xml-prompt-builder.git
-
-# Navigate to project directory
 cd xml-prompt-builder
-
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
 ```
 
-## 🧩 Use Cases
+2. Install dependencies:
+```bash
+pnpm install
+```
 
-- Creating structured prompts for large language models
-- Designing XML-based templates for API requests
-- Generating configuration files with proper formatting
-- Teaching XML structure and syntax to beginners
+3. Run the development server:
+```bash
+pnpm dev
+```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🚀 Build & Deploy
+
+Build for production:
+```bash
+pnpm build
+```
+
+Start production server:
+```bash
+pnpm start
+```
+
+## 🎯 Usage
+
+1. **Add Elements**: Click "Add Element" to create new XML tags
+2. **Edit Properties**: Select any element to edit its name and content
+3. **Nest Elements**: Add child elements to create nested structures
+4. **Reorder**: Use drag and drop to rearrange elements
+5. **Import**: Paste existing XML to load and edit it
+6. **Export**: Copy the final XML for use in your AI applications
+
+## 🔧 Development
+
+The project uses Next.js 14 with the App Router for modern React development:
+
+- `app/` - Next.js App Router pages and layouts
+- `src/components/` - React components
+- `src/hooks/` - Custom React hooks
+- `src/lib/` - Utility functions and libraries
+
+## 📱 SEO Optimized
+
+- Server-side rendering capabilities
+- Structured data (JSON-LD) for search engines
+- Open Graph and Twitter Card support
+- Semantic HTML structure
+- Performance optimized with Next.js
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to submit pull requests or open issues for new features, bug fixes, or improvements.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+## 📄 License
 
-## 📝 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
-- Built with ♥ for prompt engineers and AI enthusiasts
-- Find me on GitHub [@lolrazh](https://github.com/lolrazh)
+Created with ♥ for prompt engineers and AI enthusiasts by [@lolrazh](https://github.com/lolrazh)

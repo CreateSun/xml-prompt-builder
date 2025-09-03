@@ -87,7 +87,7 @@ export function looseParseXML(xml: string): XMLElement[] {
     }
 
     const children: XMLElement[] = [];
-    let segs: string[] = [];
+    const segs: string[] = [];
     let cursor = contentStart;
 
     while (true) {
